@@ -1,0 +1,23 @@
+/*右侧的样式*/
+/*某一节知识点*/
+.chapters{
+
+}
+/*一级标题*/
+.subtitle1{
+    text-align: left;color: #ad80f1;font-size:30px;padding-left: 50px;background-color: yellow
+}
+/*二级标题*/
+.subtitle2{
+    text-align: left;color: #ad80f1;font-size:20px;padding-left: 60px;background-color: white
+}
+/*三级标题*/
+.subtitle3{
+    text-align: left;color: #ad80f1;font-size:15px;padding-left: 70px;background-color: white
+}
+span.testSpanColor{
+    color: #d3e1f6;
+}
+pre{
+  font-family:Consolas, "Courier New", Courier, monospace;
+}

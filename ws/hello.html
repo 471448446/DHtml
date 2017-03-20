@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-cn">
+ <!-- <meta charset="utf-8" /> -->
+ <meta http-equiv="Content-Type" content="charset=utf-8">
+ <title>Html 笔记</title>
+<frameset cols="20%,*">
+<!-- noresize="noresize" -->
+<frame src="/ws/catalog.html" ></frame>
+<!--name属性是用于其他frame跳转用的，用于指定跳转在哪里显示-->
+<frame src="/ws/content.html" name="showframe"></frame>
+</frameset>
+<noframes>
+<body>
+	<div >
+		<p>frame标签不能和body一起用，当你看到这个标签时说明你的浏览器不支持框架标签。</p>
+	</div>
+</body>
+</noframes>
+</html>

@@ -1,0 +1,361 @@
+<!-- 申明网页编写类型 ！DOCTYPE 只是表示申明 后面的html表示html5申明-->
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta name="author" content="better"/>
+    <meta name="description"content="HTML examples">
+    <meta name="keywords"content="HTML, DHTML, CSS, XML, XHTML, JavaScript, html笔记">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <!-- httpEquiv 属性把 content 属性连接到 HTTP 头部。 -->
+    <meta http-equiv="Content-Type" content="charset=utf-8">
+    <!-- <meta charset="utf-8" /> -->
+    <title>笔记详情</title>
+    <style name="inter_style" type="text/css">
+    #header{
+
+    }
+    #nav{
+        background-color: #eeeeee;
+        float: left;
+        width: 200px;
+        /*min-height: 200px*/
+    }
+    #main{
+        background-color: white;
+        float: left;
+    }
+    body{background-color: write}
+    .testDiv{
+        text-align:right;color:red;background:#e6db22
+    }
+    .catalogue{
+        text-align: center;color: red;font-size:45px;
+    }
+    .subtitleAll{
+        text-align: left;color: #56cfef;font-size:20px;margin-left: 20px;margin-bottom: 8px
+    }
+    .subtitle{
+        text-align: left;color: #ad80f1;font-size:30px;padding-left: 50px;background-color: yellow
+    }
+    <!--悬浮http://www.jianshu.com/p/9fe74e34e3d3
+    http://www.programgo.com/article/6163394028/;jsessionid=86B535C3809A1A8E39344F4FC36C3903-->
+    .video-holder-bg{
+      position: relative; width: 100%;
+      /*position: relative; width: 100%; height: auto; text-align: center; display: inline-block; margin-left: auto;margin-right: auto;*/
+    }
+    .video-holder{
+      position: relative; width: 100%;height: auto;
+    }
+    /*.myVideoBgImg{
+      position: relative; z-index: 1; width: 100%;  height: auto;  text-align: center;
+    }*/
+    .play-icon{
+      position: absolute;text-align: center;z-index: 2;top:48%;  left:48%;
+    }
+    span.testSpanColor{
+        color: #d3e1f6;
+    }
+    table.dataintable {
+      	margin-top:10px;
+      	border-collapse:collapse;
+      	border:1px solid #aaa;
+      	width:100%;
+	}
+    </style>
+
+  </head>
+  <body class="index" >
+    <header>
+         <div class="catalogue"><a href="#tips"><p >HTML笔记</p></a></div>
+    </header>
+    <h1 style="background-color:red;font-family:verdana;text-align:center">基本的四个标签</h1>
+    <p align="right" bgcolor="yellow">h,p,a,img</p>
+    <hr />
+
+      <!--命名锚经常用于在大型文档开始位置上创建目录。可以为每个章节赋予一个命名锚，然后把链接到这些锚的链接放到文档的上部。如果您经常访问百度百科，您会发现其中几乎每个词条都采用这样的导航方式-->
+
+       <!--  <div class="subtitleAll"><a href="#mulu1">1 链接</a><br /></div>
+        <div class="subtitleAll"><a href="#mulu2">2 图片</a><br /></div>
+        <div class="subtitleAll"><a href="#mulu3">3 表格</a><br /></div>
+        <div class="subtitleAll"><a href="#mulu4">4 列表</a><br /></div>
+        <div class="subtitleAll"><a href="#mulu5">5 div，span</a><br /></div> -->
+
+    <div class="subtitle"><a name="mulu1"> <p >链接demo</p><br/></a></div>
+    <a href="#tips">1 瞄的用法：点击跳转到文档结束</a><br/>
+    <a href="http://www.baidu.com">2 百度一下</a> <br/>
+    3 点击图片<a href="http://www.baidu.com" target="_blank"><img src="next.png" width="30" height="40">
+    </a>
+    <br/>
+
+    <!--假如某个 HTML 文件包含十个图像，那么为了正确显示这个页面，需要加载 11 个文件。加载图片是需要时间的，所以我们的建议是：慎用图片。=======>很明显还是要加载图片-->
+    <div class="subtitle"><a name="mulu2"> <p >图片<img src="/ws/eg_cute.gif">demo</p><br/></a></div>
+    <!--通过改变 img 标签的 "height" 和 "width" 属性的值，您可以放大或缩小图像。-->
+    <img src="/ws/hellos.png" alt="本来是一张图片,没有加载出来" width="300" height="300" onclick=""/>
+    <img src="/ws/hello.png" alt="本来是一张图片" width="500" height="300"/><br />
+    1 网页背景图片：<!--<body background="/ws/hello.png">--><br/>
+    <!--请注意，bottom 对齐方式是默认的对齐方式。-->
+    2 字中间<img src="/ws/eg_cute.gif" align="top">插图片
+    3 <p><img src="/ws/eg_cute.gif" align="left">浮动图片，你知道是什么么？带有图像的一个段落。图像的 align 属性设置为 "left"。图像将浮动到文本的左侧。带有图像的一个段落。图像的 align 属性设置为 "right"。图像将浮动到文本的右侧。</p><br />
+    4 为图片显示替换文本 5 调整图像尺寸 6 制作图像链接 7 背景图片 8 创建图像映射
+    <br/>
+    <div class="subtitle"><p ><a name="mulu3">表格</a></p></div>
+    <table border="5" style="background:white" cellspace="5">
+        <caption>大表头---标题，感觉有点像表的描述，第几张表,表格背景色是白色哦</caption>
+        <tr><th style="background:red">表头：大多数浏览器会把表头显示为粗体居中的文本</th> <th>table的border属性添加边框 border="1" 添加边框值越大边框外边框越黑</th></tr>
+        <tr>
+            <td>表格元素</td>
+            <td>表格元素图片<img src="/ws/hello.png" alt="表格元素图片" width="100" height="30"></td>
+            <td rowspan="3">我占三列</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>空元素:这个空的单元格的边框没有被显示出来。为了避免这种情况，在空单元格中添加一个空格占位符，就可以将边框显示出来。</td>
+        </tr>
+        <tr>
+            <td>嵌套table 有cellPadding,cellspacing</td>
+            <td>
+                <table border="1" cellpadding="15" cellspacing="10" background="/ws/hello.png">
+                    <tr><td>A</td><td>B</td></tr>
+                    <tr><td>B</td><td>D</td></tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align:center">我占三行</td>
+        </tr>
+        <tr>
+            <td background="/ws/hello.png">单元格背景颜色以及图片</td>
+            <td style="text-align:right">在表格单元中排列内容，文字对齐方式：style以及align</td>
+        </tr>
+        <tr>
+            <td>frame 属性无法在 Internet Explorer 中正确地显示。演示如何使用 "frame" 属性来控制围绕表格的边框</td>
+            <td >
+                <table>
+                    <tr>
+                        <td>
+                            <table frame="box" cellpadding="15" cellspacing="10" >
+                                <tr><td>A</td><td>B</td></tr>
+                                <tr><td>B</td><td>D</td></tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table frame="vsides" cellpadding="15" cellspacing="10" >
+                                <tr><td>A</td><td>B</td></tr>
+                                <tr><td>B</td><td>D</td></tr>
+                             </table>
+                        </td>
+                        <td>
+                            <table frame="below" cellpadding="15" cellspacing="10" >
+                                <tr><td>A</td><td>B</td></tr>
+                                <tr><td>B</td><td>D</td></tr>
+                             </table>
+                        </td>
+                        <td>
+                            <table frame="above" cellpadding="15" cellspacing="10" >
+                                <tr><td>A</td><td>B</td></tr>
+                                <tr><td>B</td><td>D</td></tr>
+                             </table>
+                        </td>
+                        <td>
+                            <table frame="hsides" cellpadding="15" cellspacing="10" >
+                                <tr><td>A</td><td>B</td></tr>
+                                <tr><td>B</td><td>D</td></tr>
+                             </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div class="subtitle"><p ><a name="mulu4">列表</a></p></div>
+    两个序列标签，以及嵌套，定义列表<br/>
+    <p>无序列表<br />
+        问：你妈妈跟你女朋友同事掉进水里，你改先救谁？
+        <ul type="选择题">
+            <li>A.先救妈妈
+                <ul type="reason">
+                    <li>生体发肤受之父母</li>
+                    <li>不解释</li>
+                </ul>
+            </li>
+            <li>B.先救女朋友
+                <ol start="99">
+                    <li>离得进一点</li>
+                    <li>test</li>
+                </ol>
+            </li>
+        </ul>
+    </p>
+    <p>有顺序列表
+        <ol start="1" type="答案">
+            <li>A</li>
+            <li>B</li>
+        </ol>
+    </p>
+    <div>
+       <div class="subtitle"><a name="mulu5"> <p >div,span</p></a></div>
+       <p>大多数 HTML 元素被定义为块级元素或内联元素。块：&nbsp;块例子：&lt;h1&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;table&gt;</p><br/>内链：&lt;a&gt;&lt;img&gt;
+       HTML &lt;div&gt; 元素是块级元素，它是可用于组合其他 HTML 元素的容器。&lt;div&gt; 元素的另一个常见的用途是文档布局。它取代了使用表格定义布局的老式方法。使用 &lt;table&gt;元素进行文档布局不是表格的正确用法。&lt;table&gt;元素的作用是显示表格化的数据。<br/>
+       <div style="color:#00ff00">
+        <p>你看到的&lt;p&gt;</p>
+        <p>两个在一个div下面</p>
+        <p><span class="testSpanColor">span 包裹some text.</span>//span zai div 中.没用span的颜色是div定义的颜色</p>
+       </div>
+       <p><span class="testSpanColor">span 包裹some text.</span>//span 不在 div 中.注意span与div在&lt;style&gt;申明class不一样，区别。</p>
+       <div class="testDiv">
+        <p>你看到的&lt;p&gt;</p>
+        <p>两个在一个div下面</p>
+       </div>
+    </div>
+    <div>
+       <div class="subtitle"><a name="mulu6"> <p >frame 标签</p></a></div>
+       &lt;frameset&gt; &lt;frame&gt; &lt;/frame&gt; &lt;/frameset&gt;<br />
+       框架结构标签（&lt;frameset&gt;）定义如何将窗口分割为框架<br/>
+       每个 frameset 定义了一系列行或列<br/>
+       rows/columns 的值规定了每行或每列占据屏幕的面积<br/>
+       noresize="noresize"
+   </div>
+
+   <div>
+    <div class="subtitle"><a name="mulu7">iframe 网页内部显示网页</a></div>
+    <iframe src="http://www.baidu.com" width="100%" height="100" frameborder="0"></iframe>
+    <iframe src="" name="window" width="80%"></iframe>
+    <a href="http://www.localhost/ws/hello.html" target="window">点我试试</a><br />
+    <p><b>注释：</b>由于链接的目标匹配 iframe 的名称，所以链接会在 iframe 中打开。</p>
+   </div>
+
+   <div>
+    <div class="subtitle"><a name="mulu8"> 脚本</a> </div>
+    <p><b>JavaScript 使 HTML 页面具有更强的动态和交互性。。</b>&lt;script&gt; 标签用于定义客户端脚本，比如 JavaScript。script 元素既可包含脚本语句，也可通过 src 属性指向外部脚本文件。必需的 type 属性规定脚本的 MIME 类型。JavaScript 最常用于图片操作、表单验证以及内容动态更新。</p>
+    <script type="text/javascript">
+    document.write("以上是定义");
+    </script>
+    <noscript>不支持 JavaScript 的浏览器将展示,另外不知只frame标签的怎么展示&lt;noframe&gt;
+    </noscript>
+   </div>
+
+   <div>
+    <div class="subtitle"><a name="mulu9">HTML 头部元素</a></div>
+    HTML 标题&lt;title&gt;<br />
+    <a href="http://www.w3school.com.cn/tiy/t.asp?f=html_base" target="_blank"> 如何使用 base 标签使页面中的所有标签在新窗口中打开。</a><br/>
+    &lt;meta&gt;元素来元素来描述文档。<br/>
+    使用 <meta> 元素来定义文档的关键词。<br/>
+    <a href="/ws/RefreshLocation.html" target="_blank">重定向</a>
+   </div>
+   <div>
+     <div class="subtitle"><a name="mulu10">HTML 字符实体</a></div>
+     HTML 中的预留字符必须被替换为字符实体。<br/>
+     在 HTML 中，某些字符是预留的。(类似程序语言中的关键字，不能用)
+     <a href="http://www.w3school.com.cn/html/html_entities.asp">字符实体</a>
+   </div>
+   <div>
+     <div class="subtitle"><a name="mulu11"> HTML 统一资源定位器</a></div>
+     URL====&gt;scheme://host.domain:port/path/filename
+     <ul>
+       <li>scheme - 定义因特网服务的类型。最常见的类型是 http</li>
+       <li>host - 定义域主机（http 的默认主机是 www）</li>
+       <li>domain - 定义因特网域名，比如 w3school.com.cn</li>
+       <li>:port - 定义主机上的端口号（http 的默认端口号是 80）</li>
+       <li>path - 定义服务器上的路径（如果省略，则文档必须位于网站的根目录中）。</li>
+       <li>filename - 定义文档/资源的名称</li>
+     </ul>
+     <table class="dataintable">
+        <tr>
+        <th>Scheme</th>
+        <th>访问</th>
+        <th>用于...</th>
+        </tr>
+        <tr>
+        <td>http</td>
+        <td>超文本传输协议</td>
+        <td>以 http:// 开头的普通网页。不加密。</td>
+        </tr>
+        <tr>
+        <td>https</td>
+        <td>安全超文本传输协议</td>
+        <td>安全网页。加密所有信息交换。</td>
+        </tr>
+        <tr>
+        <td>ftp</td>
+        <td>文件传输协议</td>
+        <td>用于将文件下载或上传至网站。</td>
+        </tr>
+        <tr>
+        <td>file</td>
+        <td>&nbsp;</td>
+        <td>您计算机上的文件。</td>
+        </tr>
+        </table>
+   </div>
+
+   <div>
+    <div class="subtitle"><a name="mulu12"> 表单</a></div>
+    <form style="font-size:17px;color:red;padding:30px" action="action://buyAction?100114">
+      姓名：
+      <input type="text" name="name"></input><br />
+      密码:
+      <input type="password" name="psw"></input><br/>
+      性别：
+      <input type="radio" name="sex_man" value="男" checked="true"></input>
+      <input type="radio" name="sex_woman" value="女"></input><br/>
+      <input type="checkbox" name="vehicle" value="Bike">I have a bike
+      <input type="checkbox" name="vehicle" value="Car">I have a car
+      <select name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+      </select>
+      <textarea name="message" rows="10" cols="30">
+      The cat was playing in the garden.
+      </textarea>
+      <input type="submit" value="注册" onclick="action://buyAction?100114"></input>
+      <input type="button" onclick="alert('Hello World!')" value="type Click Me!">
+      <button type="button" onclick="alert('Hello')">点击</button>
+    </form>
+    <p>如果省略 action 属性，则 action 会被设置为当前页面。<br/>
+      如果要正确地被提交，每个输入字段必须设置一个 name 属性。
+    </p>
+   </div>
+
+
+
+   <div>
+     <div class="subtitle"><a name="mulu0">总结</a></div>
+     <strong>html编写步骤：</strong><br/>
+     <ul>
+       <li>写文档申明!DOCTYPE</li>
+       <li>写好基本的框架，即html,head,body标签</li>
+       <li>想好布局，大致的样式</li>
+       <li>20160907</li>
+     </ul>
+   </div>
+  <div class="video-holder-bg">
+   <div class="video-holder">
+     <!-- <div class="myVideoBgImg">
+         <img src="/ws/hello.png" width="100%" height="auto"/>
+     </div> -->
+     <img src="http://cms-bucket.nosdn.127.net/catchpic/d/d6/d696c4c7c2f6c4624fe26045ce3ec614.jpg" width="100%" height="auto"/>
+     <div class="play-icon">
+        <img src="/ws/ic_launcher.png" width="auto" height="auto" />
+     </div>
+   </div>
+ </div>
+   <!-- <img src="/ws/ic_launcher.png" width="auto" height="auto" /> -->
+
+    <p><q>Is you a SB.</p><blockquote cite="http://wwww.baidu.com">from baidu cite</blockquote>
+    <p>To open a file, select:</p>
+    <p><kbd>File | Open...</kbd></p><br/>
+    代码样式
+    <code > var version={
+      firstName:"Bill",
+      lastName:"Fuck"
+      height:"50"
+    }</code><br />
+    <samp>for(int i=50;i<100;i++){
+      print("this is p="+i);
+    }
+    </samp><br/>
+    <a name="tips"><p style="font-size:20px;text-align:center">这是一个提示，THE END!。</p></a>
+ </body>
+ </html>

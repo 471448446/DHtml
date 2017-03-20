@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+  <meta http-equiv="Content-Type" content="charset=utf-8">
+  <!--
+  http://www.w3school.com.cn/html/html_css.asp
+  当样式需要被应用到很多页面的时候，外部样式表将是理想的选择。使用外部样式表，你就可以通过更改一个文件来改变整个站点的外观。
+  -->
+  <link rel="stylesheet" type="text/css" href="/ws//css/common.css" />
+  <script src="/ws/js/common.js"></script>
+  <title>笔记详情</title>
+</head>
+<body>
+  <div class="chapters">
+    <div class="subtitle1">
+      <a name="mulu1"> javascript 使用<br/></a>
+    </div>
+    <div class="subtitle2">
+       script 标签<br/>
+    </div>
+    <strong>
+      HTML 中的脚本必须位于 &lt; script&gt; 与 &lt; /script&gt;  标签之间。</br>
+      脚本可被放置在 HTML 页面的 &lt;body&gt;  和 &lt;head&gt;  部分中。
+    </strong>
+    script标签，会告诉 JavaScript 在何处开始和结束，包含JS代码。</br>
+    JavaScript 是所有现代浏览器以及 HTML5 中的默认脚本语言。
+    <script>
+    document.write("<p>JavaScript 会在页面加载时向 HTML 的 &lt;body&gt; 写文本</p>");
+    </script>
+    <div class="subtitle2">
+      函数与事件
+    </div>
+    如果我们把 JavaScript 代码放入函数中，就可以在事件发生时调用该函数。
+    <div class="subtitle2">
+       &lt;body&gt;  和 &lt;head&gt; 中的 JavaScript
+    </div>
+    您可以在 HTML 文档中放入不限数量的脚本。通常的做法是把函数放入&lt;head&gt; 部分中，或者放在页面底部。这样就可以把它们安置到同一处位置，不会干扰页面的内容。
+    <div class="subtitle3">
+       &lt;head&gt; 中的 JavaScript
+    </div>
+    <a href="/ws/jsDemoHeadFunc.html" target="_blank">demo</a>
+    <iframe src="/ws/jsDemoHeadFunc.html" width="100%" height="100"></iframe>
+    <div class="subtitle3">
+       &lt;body&gt; 中的 JavaScript
+    </div>
+    <a href="/ws/jsDemoBodyFunc.html" target="_blank">demo</a>
+    <iframe src="/ws/jsDemoBodyFunc.html" width="100%" height="100"></iframe>
+    <strong>发现一个bug，如果写出&lt;iframe/&gt;后面的就看不到了，写出一对标签的时候就可以看见，whf</br></strong>
+    我们把 JavaScript 放到了页面代码的底部，这样就可以确保在 p 元素创建之后再执行脚本。
+    <div class="subtitle3">
+       外部的 JavaScript
+    </div>
+    位置放置head和body都可以。</br>
+    <p id="demo">A Paragraph</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+    </br>20170315
+   </div>
+
+   <div class="chapters">
+     <div class="subtitle1">
+       <a name="mulu2"> javascript 输出<br/></a>
+     </div>
+     <div class="subtitle2">
+       操作 HTML 元素
+     </div>
+     document.getElementById(id),例子如上。
+     <div class="subtitle2">
+       写到文档输出
+     </div>
+     <script>
+     document.write("<p>直接在html中输出。比如你看到的这句话就是。</br>\
+     如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖：</p>");
+     </script>
+   </div>
+   <div class="chapters">
+     <div class="subtitle1">
+       <a name="mulu3">JavaScript 语句</a>
+     </div>
+     由于是js代码，所以一分号结束（非不需的）。</br>
+    浏览器会按照编写顺序来执行每条语句。</br>
+    js代码块{}括号组成。</br>
+    js对大小写敏感。</br>
+    js会忽略空格。</br>
+    对代码行进行折行：您可以在文本字符串中使用反斜杠对代码行进行换行
+   </div>
+   <div class="chapters">
+     <div class="subtitle1">
+       <a name="mulu4">Js 变量</a>
+     </div>
+     命名：</br>
+     <ul>
+       <li>变量必须以字母开头</li>
+       <li>变量也能以 $ 和 _ 符号开头（不过我们不推荐这么做）</li>
+       <li>变量名称对大小写敏感（y 和 Y 是不同的变量）</li>
+     </ul>
+     类型：</br>
+     var
+     <pre>
+       var a=10;
+       var a=10,b=20;
+     </pre>
+     重新声明 JavaScript 变量,变量的值不会变化。
+     <pre>
+       var carname="Volvo";
+       var carname;
+     </pre>
+     var的值还是carname。
+   </div>
+   <div class="chapters">
+     <div class="subtitle1">
+       <a name="mulu5">JavaScript 数据类型</a>
+     </div>
+     动态数据类型，这个于java，c++面向对象的数据类型不一样。</br>
+     var x;                // x 为 undefined</br>
+     var x = 6;           // x 为数字</br>
+     var x = "Bill";      // x 为字符串</br>
+     所以说基本的数据类型都用var来表示</br>
+     数组：</br>
+     <pre>
+       var arrays=new Array();
+       var arays=new Array("A","B");
+       var arr=["a","b"];
+     </pre>
+     对象：</br>
+     这个有点区别。</br>
+     对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔</br>
+     <pre>
+       var person={firstname:"Bill", lastname:"Gates", id:5566};
+     </pre>
+     上面例子中的对象 (person) 有三个属性：firstname、lastname 以及id。.</br>
+     <script>
+         var man={name:"米昂子",age:17};
+         document.write(man.name+","+man.age);
+         var person=new Object();
+         person.name="我是申明对象后添加的属性叫名字";
+         person.height=“220cm”;
+         document.write(person.name+","+person.height);
+     </script>
+     <div class="subtitle2">
+       Undefined 和 Null
+     </div>
+     undefined:表示么有值。值就是undefines就是没有初始化。</br>
+     null:表示赋值为空。</br>
+     怎样申明变量，数组，对象？</br>申明的对象感觉不好维护，以后我要一个一个的去找？？。
+   </div>
+   <div class="chapters">
+     <div class="subtitle1">
+       <a name="mulu6">运算符</div>
+     </div>
+     这个是相同的。算数，逻辑，比较，赋值。控制语句(if&160;else,while,do&160;while)。break。
+   </div>
+   <div class="chapters">
+     <div class="subtitle1">
+       <a name="mulu6">异常处理</div>
+     </div>
+     这个于java一样有错误处理机制。try&160;catch&160;finally。throw 。但是方法没有throws。
+   </div>
+</body>
+</html>
